@@ -30,80 +30,103 @@ html {
   scroll-behavior: smooth;
 }
 
-/* shared styles */
-.display-flex {
-  display: flex;
+/* Header & Navigation */
+header {
+  background: linear-gradient(135deg, var(--light-bg) 0%, #fff5eb 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.text-primary {
-  color: #ff900e;
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 144, 14, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
 }
 
-/* dark 02 */
-.text-gray {
-  color: #424242;
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50px, 50px) rotate(180deg);
+  }
 }
 
-/* dark03 */
-.text-light-gray {
-  color: #727272;
-}
-
-.bg-light {
-  background-color: rgba(255, 144, 14, 0.1);
-}
-
-.btn-primary {
-  background-color: #ff900e;
-  color: white;
-  padding: 20px 25px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  border-radius: 8px;
-  border: none;
-}
-
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-main > section {
-  margin-top: 130px;
-}
-
-.section-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-/* header styles */
-
-/* navbar related styles */
 .navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 60px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 .brand {
-  font-weight: 700;
-  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  transition: transform 0.3s ease;
 }
 
-.nav-item {
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
   list-style: none;
-  margin-right: 30px;
+  gap: 45px;
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
+  color: var(--dark-02);
   font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar,
-.banner {
-  max-width: 1440px;
-  margin: 0 auto;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* banner related styles */
