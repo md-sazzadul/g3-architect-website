@@ -4,11 +4,25 @@
   box-sizing: border-box;
 }
 
-.work-sans-font {
+:root {
+  --primary: #ff900e;
+  --primary-dark: #e67e00;
+  --primary-light: #ffa63d;
+  --dark: #1a1a1a;
+  --dark-02: #424242;
+  --dark-03: #727272;
+  --light-bg: #fff9f4;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+body {
   font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* shared styles */
