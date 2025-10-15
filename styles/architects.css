@@ -210,3 +210,38 @@ main > section {
 .sponsor-companies img {
   filter: grayscale(100%);
 }
+
+/* responsive media query */
+@media screen and (max-width: 576px) {
+  .navbar,
+  .nav-links,
+  .features,
+  .teams {
+    flex-direction: column;
+  }
+
+  .team-img-container,
+  .facts-container,
+  .sponsor-companies {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-container {
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .sponsor-companies {
+    justify-items: center;
+    gap: 50px;
+  }
+
+  .our-features {
+    margin-left: 20px;
+  }
+
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
