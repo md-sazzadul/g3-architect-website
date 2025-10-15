@@ -294,46 +294,73 @@ section {
   margin-bottom: 35px;
 }
 
-/* features section related styles */
-
+/* Features Section */
 .features {
-  gap: 140px;
+  display: flex;
+  gap: 120px;
+  align-items: center;
+}
+
+.features > div:first-child {
+  flex: 1;
 }
 
 #feature-section-title {
-  border-left: 5px solid #ff900e;
-  padding-left: 20px;
+  border-left: 5px solid var(--primary);
+  padding-left: 25px;
+  margin-bottom: 30px;
 }
 
 .feature-card {
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
-  margin-bottom: 20px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 144, 14, 0.1);
 }
 
-.feature-card .feature-title {
+.feature-card:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.feature-title {
   font-weight: 600;
-  font-size: 1.25rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  font-size: 1.375rem;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.featured-architect {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.featured-architect img {
+  width: 550px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-lg);
 }
 
 #experience-badge {
-  padding: 45px 42px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-left: -100px;
-  margin-top: -100px;
+  position: absolute;
+  bottom: -50px;
+  left: -80px;
+  padding: 50px 45px;
+  font-size: 1.375rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(255, 144, 14, 0.3);
 }
 
 #experience-year {
   font-size: 4rem;
   font-weight: 700;
-}
-
-.featured-architect img {
-  width: 100%;
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
 }
 
 /* some facts related styles */
