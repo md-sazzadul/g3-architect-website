@@ -25,6 +25,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 /* shared styles */
 .display-flex {
   display: flex;
