@@ -82,3 +82,20 @@ main > section {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+/* banner related styles */
+.banner-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.banner-image {
+  width: 100%;
+}
