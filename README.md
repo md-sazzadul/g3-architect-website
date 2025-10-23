@@ -265,4 +265,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-**Made with ❤️ by G3 Architects Team | © 2025 All Rights Reserved**
+**Made with ❤️ by Md Sazzadul Islam | © 2025 All Rights Reserved**
